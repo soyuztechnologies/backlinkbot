@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class readfile {
 	public static ArrayList<String> getAllSites() throws IOException{
-		BufferedReader br = new BufferedReader(new FileReader("C:\\\\Users\\\\sc\\\\automationtool\\\\site.txt"));
+		BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\sc\\Documents\\Visual Studio 2013\\Projects\\FBAutomateold\\seo\\site.txt"));
 		  try {
 		      StringBuilder sb = new StringBuilder();
 		      String line = br.readLine();
