@@ -2,6 +2,8 @@
 
 package anubhavtrainings.apk.Backlinkbot;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Set;
@@ -20,6 +22,7 @@ public class App {
 	public static ArrayList<String> readfilealldata;
 	public static String allText ="";
   public static void main(String[] args) throws InterruptedException, IOException {
+	  //readfilealldata = readfile.getAllSites();
 	  myMethod1();
 	  myMethod();
 	  myMethod2();
@@ -27,7 +30,10 @@ public class App {
   }
   static void myMethod1() throws IOException
   {
-	  System.setProperty("webdriver.chrome.driver","C:\\developmenttools\\START\\webdrivers\\chromedriver.exe");
+	  String currentDirectory=System.getProperty("user.dir");
+		System.out.println(currentDirectory);
+
+	  System.setProperty("webdriver.chrome.driver",currentDirectory + "\\files\\webdrivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		try {
 			  readfilealldata = readfile.getAllSites();
@@ -192,7 +198,7 @@ public class App {
 		      ThreadLocalRandom random = ThreadLocalRandom.current();
 
 		      int rand = random.nextInt(1, 20);
-			  ArrayList<String> readfilealldata1 = reademail.getAllSites1();
+			  ArrayList<String> readfilealldata1 = readfile.readMail();
 		      ThreadLocalRandom random1 = ThreadLocalRandom.current();
 		      int rand1 = random1.nextInt(1, 15);
 		      System.out.println(rand1);
