@@ -192,7 +192,7 @@ public class App {
 			     
 		  } catch(Exception e) {
 			  System.out.println("site7");
-		  }
+		  } 
 		try {
 			ArrayList<String> readfilealldata = readfile.getAllSites();
 		      ThreadLocalRandom random = ThreadLocalRandom.current();
