@@ -1,0 +1,248 @@
+def main1():
+    from selenium import webdriver
+    from selenium.webdriver.common.keys import Keys
+    import random
+    import time
+    url1 = "https://pingmyurls.com/"
+    url2 = "http://www.pingmyurl.com/social/"
+    driver = webdriver.Chrome('driver/chromedriver.exe')
+
+    def fun():
+        fHOne = open(r'C:\auto\add- Copy.txt')
+        content = fHOne.read()
+        lines = content.splitlines()
+        mylin = (random.choice(lines))
+        fHOne.close()
+        line_count = 0
+        text_file = open(r"C:\auto\adddd.txt")
+        for line in text_file:
+            # line_count = line_count + 1
+            if line == url1:
+                print("match found1")
+        driver.get("https://pingmyurls.com/")
+        element = driver.find_element_by_xpath("//input[@name='furl']")
+        element.click()
+        print(mylin)
+        element.send_keys(mylin + Keys.RETURN)
+        element1 = driver.find_element_by_xpath("//input[@name='button']")
+        element1.click()
+
+    fun()
+
+    def fun1():
+        fHOne = open(r'C:\auto\add- Copy.txt')
+        content = fHOne.read()
+        lines = content.splitlines()
+        mylin = (random.choice(lines))
+        fHOne.close()
+        text_file1 = open(r"C:\auto\adddd.txt")
+        for line in text_file1:
+            if line == url2:
+                print("match- found2")
+        driver.execute_script("window.open('');")
+        driver.switch_to.window(driver.window_handles[1])
+        driver.get("https://sas.web.id/seo/youtubebacklink/")
+        allTabs = driver.window_handles
+        for tab in allTabs:
+            driver.switch_to.window(tab)
+            if (driver.current_url == ("https://sas.web.id/seo/youtubebacklink/")):
+                element2 = driver.find_element_by_xpath("//input[@class='form-control input-lg']")
+                element2.clear()
+                element2.click()
+                element2.send_keys(mylin + Keys.RETURN)
+                element3 = driver.find_element_by_xpath("//button[@class='btn btn-primary btn-lg']")
+                element3.click()
+
+    fun1()
+
+    def fun2():
+        fHOne = open(r'C:\auto\add- Copy.txt')
+        content = fHOne.read()
+        lines = content.splitlines()
+        mylin = (random.choice(lines))
+        fHOne.close()
+        driver.execute_script("window.open('');")
+        driver.switch_to.window(driver.window_handles[2])
+        driver.get("https://www.site24x7.com/ping-test.html")
+        allTabs1 = driver.window_handles
+        for tab2 in allTabs1:
+            driver.switch_to.window(tab2)
+            if (driver.current_url == ("https://www.site24x7.com/ping-test.html")):
+                elementp = driver.find_element_by_xpath("//input[@class='hostnameonly']")
+                elementp.clear()
+                elementp.click()
+                elementp.send_keys(mylin + Keys.RETURN)
+                elementb1 = driver.find_element_by_xpath("//div[@class='grbutton']")
+                elementb1.click()
+
+    fun2()
+
+    def fun3():
+        fHOne = open(r'C:\auto\add- Copy.txt')
+        content = fHOne.read()
+        lines = content.splitlines()
+        mylin = (random.choice(lines))
+        fHOne.close()
+        driver.execute_script("window.open('');")
+        driver.switch_to.window(driver.window_handles[3])
+        driver.get("https://www.pingmylinks.com/addurl/")
+        time.sleep(5)
+        allTabs2 = driver.window_handles
+        for tab3 in allTabs2:
+            driver.switch_to.window(tab3)
+            if (driver.current_url == ("https://www.pingmylinks.com/addurl/")):
+                print("match found")
+                elementp1 = driver.find_element_by_xpath("//input[@name='furl']")
+                elementp1.click()
+                elementp1.send_keys(mylin + Keys.RETURN)
+                elementb3 = driver.find_element_by_xpath("//input[@onclick='fAjaxReg();this.blur();']")
+                elementb3.click()
+
+    fun3()
+
+    def fun4():
+        fHOne = open(r'C:\auto\add- Copy.txt')
+        content = fHOne.read()
+        lines = content.splitlines()
+        mylin = (random.choice(lines))
+        fHOne.close()
+        driver.execute_script("window.open('');")
+        driver.switch_to.window(driver.window_handles[4])
+        driver.get("https://feedburner.google.com/fb/a/ping")
+        time.sleep(5)
+        allTabs3 = driver.window_handles
+        for tab4 in allTabs3:
+            driver.switch_to.window(tab4)
+            if (driver.current_url == ("https://feedburner.google.com/fb/a/ping")):
+                print("match found")
+                elementp14 = driver.find_element_by_xpath("//input[@name='bloglink']")
+                elementp14.click()
+                elementp14.send_keys(mylin + Keys.RETURN)
+                elementb34 = driver.find_element_by_xpath("//input[@class='button']")
+                elementb34.click()
+
+    fun4()
+
+    def fun5():
+        fHOne = open(r'C:\auto\add- Copy.txt')
+        content = fHOne.read()
+        lines = content.splitlines()
+        mylin = (random.choice(lines))
+        fHOne.close()
+        driver.execute_script("window.open('');")
+        driver.switch_to.window(driver.window_handles[5])
+        driver.get("http://www.indexkings.com/")
+        time.sleep(5)
+        allTabs5 = driver.window_handles
+        for tab5 in allTabs5:
+            driver.switch_to.window(tab5)
+            if (driver.current_url == ("http://www.indexkings.com/")):
+                print("match found")
+                elementp15 = driver.find_element_by_xpath("//textarea[@name='urls']")
+                elementp15.click()
+                elementp15.send_keys(mylin + Keys.RETURN)
+                elementb35 = driver.find_element_by_xpath("//input[@value='RAPID INDEX!']")
+                elementb35.click()
+
+    fun5()
+
+    def fun6():
+        fHOne = open(r'C:\auto\add- Copy.txt')
+        content = fHOne.read()
+        lines = content.splitlines()
+        mylin = (random.choice(lines))
+        fHOne.close()
+        driver.execute_script("window.open('');")
+        driver.switch_to.window(driver.window_handles[6])
+        driver.get("http://seowagon.com/backlink-maker")
+        allTabs6 = driver.window_handles
+        for tab6 in allTabs6:
+            driver.switch_to.window(tab6)
+            if (driver.current_url == ("http://seowagon.com/backlink-maker")):
+                print("match found 6666")
+                elementp16 = driver.find_element_by_xpath("//input[@id='myurl']")
+                elementp16.click()
+                elementp16.send_keys(mylin + Keys.RETURN)
+                elementb36 = driver.find_element_by_xpath("//a[@class='btn btn-info']")
+                elementb36.click()
+
+    fun6()
+
+    def fun7():
+        fHOne = open(r'C:\auto\add- Copy.txt')
+        content = fHOne.read()
+        lines = content.splitlines()
+        mylin = (random.choice(lines))
+        fHOne.close()
+        driver.execute_script("window.open('');")
+        driver.switch_to.window(driver.window_handles[7])
+        driver.get("https://megritools.com/backlink-generator")
+        allTabs7 = driver.window_handles
+        for tab7 in allTabs7:
+            driver.switch_to.window(tab7)
+            if (driver.current_url == ("https://megritools.com/backlink-generator")):
+                print("match found 77777")
+                elementp17 = driver.find_element_by_xpath("//input[@id='myurl']")
+                elementp17.click()
+                elementp17.send_keys(mylin + Keys.RETURN)
+                elementb37 = driver.find_element_by_xpath("//a[@class='btn btn-info']")
+                elementb37.click()
+
+    fun7()
+
+    def fun8():
+        fHOne = open(r'C:\auto\add- Copy.txt')
+        content = fHOne.read()
+        lines = content.splitlines()
+        mylin = (random.choice(lines))
+        fHOne.close()
+        driver.execute_script("window.open('');")
+        driver.switch_to.window(driver.window_handles[8])
+        driver.get("https://excitesubmit.com/")
+        allTabs8 = driver.window_handles
+        for tab8 in allTabs8:
+            driver.switch_to.window(tab8)
+            if (driver.current_url == ("https://excitesubmit.com/")):
+                print("match found 88888")
+                elementp18 = driver.find_element_by_xpath("//input[@id='furl']")
+                elementp18.click()
+                elementp18.send_keys(mylin + Keys.RETURN)
+                elementb38 = driver.find_element_by_xpath("//input[@name='button']")
+                elementb38.click()
+
+    fun8()
+
+    def fun9():
+        fHOne = open(r'C:\auto\add- Copy.txt')
+        content = fHOne.read()
+        lines = content.splitlines()
+        mylin = (random.choice(lines))
+        fHOne.close()
+        driver.execute_script("window.open('');")
+        driver.switch_to.window(driver.window_handles[9])
+        driver.get("https://us.mysiteslink.com/index.php")
+        allTabs9 = driver.window_handles
+        for tab9 in allTabs9:
+            driver.switch_to.window(tab9)
+            if (driver.current_url == ("https://us.mysiteslink.com/index.php")):
+                print("match found 99999")
+                elementp19 = driver.find_element_by_xpath("//input[@id='sn']")
+                elementp19.click()
+                elementp19.send_keys(mylin + Keys.RETURN)
+                elementb39 = driver.find_element_by_xpath("//input[@id='ss']")
+                elementb39.click()
+
+    fun9()
+main1()
+
+
+
+
+
+
+
+
+
+
+
+
