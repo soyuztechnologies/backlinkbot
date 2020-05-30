@@ -10,6 +10,8 @@ public class App {
 	  ((Backlink) c).myMethod1();
 	  ((Backlink) c).myMethod();
 	  ((Backlink) c).myMethod2();
+	  ((Backlink) c).myMethod3();
+	  ((Backlink) c).myMethod4();
 	//PinSites p = new PinSites();
     //((PinSites) p).mypin();
 	  
