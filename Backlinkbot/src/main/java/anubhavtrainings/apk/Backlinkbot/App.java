@@ -11,9 +11,12 @@ public class App {
 	  //((Backlink) c).myMethod();
 	  //((Backlink) c).myMethod2();
 	  //((Backlink) c).myMethod3();
-	  ((Backlink) c).myMethod5();
-	//PinSites p = new PinSites();
-    //((PinSites) p).mypin();
+	  //((Backlink) c).myMethod4();
+	 //PinSites p = new PinSites();
+     //((PinSites) p).myMethod6();
+	 //((PinSites) p).myMethod7(args);
+	 Userinterface u = new Userinterface();
+	((Userinterface) u).Ginterface();
 	  
 	  
   }
