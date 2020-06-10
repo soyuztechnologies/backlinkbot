@@ -10,13 +10,13 @@ public class App {
 	  //((Backlink) c).myMethod1();
 	  //((Backlink) c).myMethod();
 	  //((Backlink) c).myMethod2();
-	  //((Backlink) c).myMethod3();
-	  //((Backlink) c).myMethod4();
+	  //((Backlink) c).youtube();
+	  //((Backlink) c).AnubhavSite();
 	 //PinSites p = new PinSites();
      //((PinSites) p).myMethod6();
 	 //((PinSites) p).myMethod7(args);
 	 Userinterface u = new Userinterface();
-	((Userinterface) u).Ginterface();
+	((Userinterface) u).Ginterface(args);
 	  
 	  
   }
