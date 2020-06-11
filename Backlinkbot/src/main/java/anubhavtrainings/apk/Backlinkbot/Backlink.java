@@ -21,7 +21,7 @@ public class Backlink {
 	public static ArrayList<String> readfilealldata;
 	public static String allText ="";
 	public static String currentDirectory=System.getProperty("user.dir");
-	static void myMethod1() throws IOException
+	static void BacklinkWin1() throws IOException
 	  {
 
 		WebDriver driver = BrowserFactory.getBrowserInstance(currentDirectory ,"chrome");
@@ -259,7 +259,7 @@ public class Backlink {
 			  }
 			
 	 
-	  static void myMethod()throws InterruptedException, IOException{
+	  static void BacklinkWin2()throws InterruptedException, IOException{
 		  WebDriver driver = BrowserFactory.getBrowserInstance(currentDirectory ,"chrome");
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 		  try {
@@ -482,7 +482,7 @@ public class Backlink {
 		  
 	  }
 	  
-	  static void myMethod2() throws IOException
+	  static void BacklinkWin3() throws IOException
 	  {
 		  WebDriver driver = BrowserFactory.getBrowserInstance(currentDirectory ,"chrome");
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -770,7 +770,7 @@ public class Backlink {
 	  }
 	   
 
-		   static void myMethod5() throws IOException
+		   static void youtubeComment() throws IOException
 			  {
 			   WebDriver driver = BrowserFactory.getBrowserInstance(currentDirectory ,"chrome");
 				JavascriptExecutor js = (JavascriptExecutor) driver;

@@ -8,7 +8,9 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel; 
+import javax.swing.JPanel;
+
+import com.sun.prism.paint.Color;
 
 import java.io.IOException;
 public class Userinterface {
@@ -17,42 +19,82 @@ public class Userinterface {
 	      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	      JPanel panel = new JPanel(new GridBagLayout());
 	      GridBagConstraints constraints = new GridBagConstraints();
-	      constraints.insets = new Insets(5, 5, 5, 5);
+	      constraints.insets = new Insets(100,10, 100, 10);
 	      constraints.anchor = GridBagConstraints.WEST;
-	      JButton btn1 = new JButton("1");
+	      JButton btn1 = new JButton("Make Backlink");
+	      btn1.setPreferredSize(new Dimension(btn1.WIDTH + 117, btn1.HEIGHT + 40));
 	      panel.add(btn1, constraints);
-	      JButton btn2 = new JButton("2");
-	      btn2.setPreferredSize(new Dimension(btn1.getPreferredSize().width, btn1 .getPreferredSize().height + 30));
+	      btn1.addActionListener(new ActionListener(){  
+		  	    public void actionPerformed(ActionEvent e){  
+			    	Backlink  obj=new Backlink ();  
+			    	try {
+						obj.BacklinkWin1();
+						obj.BacklinkWin2();
+						obj.BacklinkWin3();
+						
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					} catch (InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+			        }  
+			    });
+	      JButton btn2 = new JButton("Youtube Playlist");
+	      btn2.setPreferredSize(new Dimension(btn2.WIDTH + 126, btn2.HEIGHT + 50));
 	      btn2.addActionListener(new ActionListener(){  
 	  	    public void actionPerformed(ActionEvent e){  
 		    	Backlink  obj=new Backlink ();  
 		    	try {
-					obj.myMethod1();
-					obj.myMethod2();
-					obj.myMethod();
+					obj.youtube();
 					
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
 				}
-		        }  
+	  	    }
 		    });
 	      panel.add(btn2, constraints);
-	      JButton btn3 = new JButton("3");
-	      btn3.setPreferredSize(new Dimension(btn2.getPreferredSize().width, btn2 .getPreferredSize().height + 20));
+	      JButton btn3 = new JButton("AnubhavSite");
+	      btn3.setPreferredSize(new Dimension(btn3.WIDTH + 105, btn3.HEIGHT + 50));
+	      btn3.addActionListener(new ActionListener(){  
+		  	    public void actionPerformed(ActionEvent e){  
+			    	Backlink  obj=new Backlink ();  
+			    	try {
+						obj.AnubhavSite();
+						
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+		  	    }
+			    });
+	      
 	      panel.add(btn3, constraints);
-	      JButton btn4 = new JButton("4");
-	      btn4.setPreferredSize(new Dimension(btn2.getPreferredSize().width, btn3 .getPreferredSize().height + 5));
+	      JButton btn4 = new JButton("Onlywire");
+	      btn4.setPreferredSize(new Dimension(btn4.WIDTH + 90, btn4.HEIGHT + 50));
+	      btn4.addActionListener(new ActionListener(){  
+		  	    public void actionPerformed(ActionEvent e){  
+		  	    	PinSites  obj=new PinSites ();  
+			    	try {
+						obj.Onlywire();
+						
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+		  	    }
+			    });
+	  
 	      panel.add(btn4, constraints);
 	      JButton btn5 = new JButton("5");
-	      btn5.setPreferredSize(new Dimension(btn2.getPreferredSize().width, btn3 .getPreferredSize().height + 50));
+	      btn5.setPreferredSize(new Dimension(btn2.getPreferredSize().width, btn3 .getPreferredSize().height + 5));
 	      panel.add(btn5, constraints);
 	      frame.add(panel);
 	      frame.pack();
 	      frame.setVisible(true);
 	    
 }
+
 }
