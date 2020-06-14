@@ -12,9 +12,10 @@ import javax.swing.JPanel;
 
 import com.sun.prism.paint.Color;
 
+import java.io.FileWriter;
 import java.io.IOException;
 public class Userinterface {
-	static void Ginterface(String[] args) throws IOException  {  
+	static void Ginterface(final String[] args) throws IOException  {  
 		  final JFrame frame = new JFrame(Userinterface.class.getSimpleName());
 	      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	      JPanel panel = new JPanel(new GridBagLayout());
@@ -26,28 +27,46 @@ public class Userinterface {
 	      panel.add(btn1, constraints);
 	      btn1.addActionListener(new ActionListener(){  
 		  	    public void actionPerformed(ActionEvent e){  
-			    	Backlink  obj=new Backlink ();  
+			    	Backlink  obj=new Backlink (); 
+			    	readfile  obj1=new readfile ();
+			    	
 			    	try {
-						obj.BacklinkWin1();
-						obj.BacklinkWin2();
-						obj.BacklinkWin3();
+			    		
+			    		//obj.BacklinkWin1();
+						//obj.BacklinkWin2();
+						//obj.BacklinkWin3();
+			    		
+						//System.out.println(obj);
+						//obj1.CreateFileWithTimeStamp(args);
+				    	String fileformate =obj1.CreateFileForBacklinkTrack(args);
+				    	System.out.println(fileformate);
+						FileWriter myWriter = new FileWriter(fileformate, true);
+					      myWriter.write( obj.toString());
+					      myWriter.write("\r\n");
+					      myWriter.close();
 						
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
-					} catch (InterruptedException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
 					}
-			        }  
+			    	
+			        }
+		  	    
 			    });
 	      JButton btn2 = new JButton("Youtube Playlist");
 	      btn2.setPreferredSize(new Dimension(btn2.WIDTH + 126, btn2.HEIGHT + 50));
 	      btn2.addActionListener(new ActionListener(){  
 	  	    public void actionPerformed(ActionEvent e){  
-		    	Backlink  obj=new Backlink ();  
+		    	Backlink  objy=new Backlink ();
+		    	readfile  obj1=new readfile ();
 		    	try {
-					obj.youtube();
+					//objy.youtube();
+					String fileformateYou =obj1.CreateFileForYoutubeTrack(args);
+			    	System.out.println(fileformateYou);
+					FileWriter myWriter = new FileWriter(fileformateYou, true);
+				      myWriter.write( objy.toString());
+				      myWriter.write("\r\n");
+				      myWriter.close();
 					
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
@@ -60,9 +79,16 @@ public class Userinterface {
 	      btn3.setPreferredSize(new Dimension(btn3.WIDTH + 105, btn3.HEIGHT + 50));
 	      btn3.addActionListener(new ActionListener(){  
 		  	    public void actionPerformed(ActionEvent e){  
-			    	Backlink  obj=new Backlink ();  
+			    	Backlink  obj=new Backlink ();
+			    	readfile  obj1=new readfile ();
 			    	try {
-						obj.AnubhavSite();
+						//obj.AnubhavSite();
+						String fileformateSite =obj1.CreateFileForAnubhavSiteTrack(args);
+				    	System.out.println(fileformateSite);
+						FileWriter myWriter = new FileWriter(fileformateSite, true);
+					      myWriter.write( obj.toString());
+					      myWriter.write("\r\n");
+					      myWriter.close();
 						
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block

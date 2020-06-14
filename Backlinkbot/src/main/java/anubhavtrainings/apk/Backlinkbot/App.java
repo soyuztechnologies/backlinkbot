@@ -13,11 +13,14 @@ public class App {
 	  //((Backlink) c).youtubeComment();
 	  //((Backlink) c).youtube();
 	  //((Backlink) c).AnubhavSite();
-	 PinSites p = new PinSites();
+	 //PinSites p = new PinSites();
      //((PinSites) p).Onlywire();
 	 Userinterface u = new Userinterface();
 	 ((Userinterface) u).Ginterface(args);
-	  
+	  //IPChanger i = new IPChanger();
+	  //((IPChanger) i).proxy();
+	 //readfile r = new readfile();
+	 //((readfile) r).CreateFileWithTimeStamp(args);
 	  
   }
   
