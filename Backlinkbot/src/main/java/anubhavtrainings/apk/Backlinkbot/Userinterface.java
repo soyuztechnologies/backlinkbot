@@ -114,7 +114,7 @@ public class Userinterface {
 			    });
 	  
 	      panel.add(btn4, constraints);
-	      JButton btn5 = new JButton("5");
+	      JButton btn5 = new JButton("IPChanger");
 	      btn5.setPreferredSize(new Dimension(btn2.getPreferredSize().width, btn3 .getPreferredSize().height + 5));
 	      panel.add(btn5, constraints);
 	      frame.add(panel);
