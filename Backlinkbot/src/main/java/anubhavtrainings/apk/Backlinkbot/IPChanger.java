@@ -1,23 +1,19 @@
 package anubhavtrainings.apk.Backlinkbot;
 
 import java.io.IOException;
-import java.lang.reflect.Proxy;
-import java.net.HttpURLConnection;
 import java.net.InetSocketAddress;
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import java.net.Socket;
 
 public class IPChanger {
+	private static final java.net.Proxy socksProxy = null;
+
 	static void proxy() throws IOException
 	  {
-		Proxy socksProxy 
-		  = new Proxy(Proxy.Type.SOCKS, new InetSocketAddress("127.0.0.1", 1080));
-		HttpURLConnection socksConnection 
-		  = (HttpURLConnection) weburl.openConnection(socksProxy);
+
+		Socket proxySocket = new Socket(socksProxy);
+		InetSocketAddress socketHost 
+		  = new InetSocketAddress("127.0.0.1", 3128);
+		proxySocket.connect(socketHost);
 	}
 
 }	

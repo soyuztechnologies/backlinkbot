@@ -1,6 +1,9 @@
 package anubhavtrainings.apk.Backlinkbot;
 
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -52,15 +55,25 @@ public class PinSites {
 		    elt81.click();
 		    
 	  }
-	static void Onlywire() throws IOException
+	static void Onlywire(final String[] args) throws IOException
 	  {
 		WebDriver driver = BrowserFactory.getBrowserInstance(currentDirectory ,"chrome");;
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		
 
 		try {
-			
-			    driver.get("https://www.onlywire.com/");
+			ArrayList<String> readfilelink = readfile.getpost();
+		      ThreadLocalRandom random = ThreadLocalRandom.current();
+
+		      int rand = random.nextInt(0, readfilelink.size()-1);
+		      readfile  obj1=new readfile ();
+		      String fileformate =obj1.CreateFileonlywireTrack(args);
+		    	System.out.println(fileformate);
+				FileWriter myWriter = new FileWriter(fileformate, true);
+			      myWriter.write(readfilelink.get(rand));
+			      myWriter.write("\r\n");
+			      myWriter.close();
+		        driver.get("https://www.onlywire.com/");
 			    driver.manage().window().maximize();
 			    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		        WebElement ele31, ele, ele1, ele12, ele13, ele14, ele15,ele16;
@@ -81,7 +94,7 @@ public class PinSites {
 		        ele14= driver.findElement(By.xpath("//input[@id='new-post-url']"));
 		        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", ele14);
 		        ele14.click();
-		        ele14.sendKeys("https://anubhav4231.blogspot.com/2020/05/abap-on-hana-training.html");
+		        ele14.sendKeys(readfilelink.get(rand));
 		        ele15= driver.findElement(By.xpath("//textarea[@id='create-post-description']"));
 		        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", ele15);
 		        ele15.click();
@@ -90,7 +103,7 @@ public class PinSites {
 		        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", ele16);
 		        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		        System.out.println("site23");
-		        ele16.click();
+		        ele16.click(); 
 		        
 		  } catch(Exception e) {
 			  System.out.println("g");

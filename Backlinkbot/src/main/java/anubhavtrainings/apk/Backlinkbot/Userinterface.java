@@ -32,9 +32,9 @@ public class Userinterface {
 			    	
 			    	try {
 			    		
-			    		//obj.BacklinkWin1();
-						//obj.BacklinkWin2();
-						//obj.BacklinkWin3();
+			    		 obj.BacklinkWin1();
+						 obj.BacklinkWin2();
+						 obj.BacklinkWin3();
 			    		
 						//System.out.println(obj);
 						//obj1.CreateFileWithTimeStamp(args);
@@ -46,6 +46,9 @@ public class Userinterface {
 					      myWriter.close();
 						
 					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					} catch (InterruptedException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}
@@ -60,7 +63,7 @@ public class Userinterface {
 		    	Backlink  objy=new Backlink ();
 		    	readfile  obj1=new readfile ();
 		    	try {
-					//objy.youtube();
+					objy.youtube();
 					String fileformateYou =obj1.CreateFileForYoutubeTrack(args);
 			    	System.out.println(fileformateYou);
 					FileWriter myWriter = new FileWriter(fileformateYou, true);
@@ -82,7 +85,7 @@ public class Userinterface {
 			    	Backlink  obj=new Backlink ();
 			    	readfile  obj1=new readfile ();
 			    	try {
-						//obj.AnubhavSite();
+						obj.AnubhavSite();
 						String fileformateSite =obj1.CreateFileForAnubhavSiteTrack(args);
 				    	System.out.println(fileformateSite);
 						FileWriter myWriter = new FileWriter(fileformateSite, true);
@@ -104,7 +107,7 @@ public class Userinterface {
 		  	    public void actionPerformed(ActionEvent e){  
 		  	    	PinSites  obj=new PinSites ();  
 			    	try {
-						obj.Onlywire();
+						obj.Onlywire(args);
 						
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block

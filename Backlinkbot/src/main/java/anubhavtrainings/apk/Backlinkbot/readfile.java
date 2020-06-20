@@ -84,6 +84,23 @@ public class readfile {
 		  }
 		   
 		}
+	public static ArrayList<String> getpost() throws IOException{
+		String currentDirectory=System.getProperty("user.dir");
+		BufferedReader br = new BufferedReader(new FileReader(currentDirectory + "\\files\\post.txt"));
+		  try {
+		      StringBuilder sb = new StringBuilder();
+		      String line = br.readLine();
+		      ArrayList<String> websites = new ArrayList<String>();
+		      while (line != null) {
+		      websites.add(line);
+		      line = br.readLine();
+		      }
+		      return websites;
+		     
+		  } finally {
+		      br.close();
+		  }
+	}
 
 	    //Create a new fileTracker for backlink
 	    public static String CreateFileForBacklinkTrack(String[] args ) {
@@ -148,6 +165,26 @@ public class readfile {
 	        cal1.setTime(Date.from(Instant.now()));
 	        String fileformateSite = String.format(
 	                currentDirectory + "\\LOG FILE\\AnubhavSite-%1$tY-%1$tm-%1$td.txt", cal1);
+	        
+	        
+
+	        // Display our result filename.
+	        try {
+	            File myObj1 = new File(fileformateSite);
+	        } catch (Exception e) {
+	            System.out.println("An error occurred.");
+	            
+	        }
+			return fileformateSite ;
+	    }
+	    
+	    public static String CreateFileonlywireTrack(String[] args ) {
+	    	String currentDirectory=System.getProperty("user.dir");
+
+	        Calendar cal1 = Calendar.getInstance();
+	        cal1.setTime(Date.from(Instant.now()));
+	        String fileformateSite = String.format(
+	                currentDirectory + "\\LOG FILE\\Onlywire-%1$tY-%1$tm-%1$td.txt", cal1);
 	        
 	        
 
