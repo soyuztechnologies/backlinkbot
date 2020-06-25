@@ -10,6 +10,8 @@ public class App {
 	 ((Userinterface) u).Ginterface(args);
 	 //IPChanger i = new IPChanger();
 	  //((IPChanger) i).proxy();
+	 //PinSites  obj=new PinSites ();
+	 //obj.Onlywire2(args);
 	 	 	  
   }
   

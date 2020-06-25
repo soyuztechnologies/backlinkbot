@@ -361,6 +361,7 @@ public class Backlink {
 		      ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();",   elet1);
 		      elet1.click();
 		      elet1.sendKeys(readfilealldata.get(rand));
+		      driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		      elt31= driver.findElement(By.xpath("//a[@class='btn btn-info']"));
 		      ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();",   elt31);
 		      elt31.click();
@@ -790,6 +791,7 @@ public class Backlink {
 				        ele31.click();
 				        ele= driver.findElement(By.xpath("//input[@type='email']"));
 				        ele.click();
+				        ele.clear();
 				        //ele = driver.findElement(By.id("//input[@type='email']"));
 				        ele.sendKeys("sonia.bajaj22f@gmail.com");
 				        elem = driver.findElement(By.id("//span[@class='RveJvd snByac']"));
