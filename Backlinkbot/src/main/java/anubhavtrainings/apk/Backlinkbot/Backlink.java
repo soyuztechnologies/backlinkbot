@@ -208,8 +208,13 @@ public class Backlink {
 		    elementpt1.sendKeys(readfilealldata1.get(rand1));
 		    elementpt2 = driver.findElement(By.xpath("//input[@id='fname']"));
 		    elementpt2.click();
-		    elementpt2.sendKeys("sunda");
+		    ArrayList<String> readName = readfile.getName();
+		    ThreadLocalRandom randomName = ThreadLocalRandom.current();
+		    int randname = randomName.nextInt(0, readName.size()-1);
+		    elementpt2.sendKeys(readName.get(randname));
+		    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		    elementpt3 = driver.findElement(By.xpath("//input[@type='Submit']"));
+		    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();",     elementpt3);
 		    elementpt3.click();
 		    
 			  } catch(Exception e) {

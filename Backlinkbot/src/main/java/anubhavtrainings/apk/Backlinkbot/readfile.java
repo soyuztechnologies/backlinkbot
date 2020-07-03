@@ -84,6 +84,25 @@ public class readfile {
 		  }
 		   
 		}
+	
+	public static ArrayList<String> getName() throws IOException{
+		String currentDirectory=System.getProperty("user.dir");
+		BufferedReader br = new BufferedReader(new FileReader(currentDirectory + "\\files\\user.txt"));
+		  try {
+		      StringBuilder sb = new StringBuilder();
+		      String line = br.readLine();
+		      ArrayList<String> websites = new ArrayList<String>();
+		      while (line != null) {
+		      websites.add(line);
+		      line = br.readLine();
+		      }
+		      return websites;
+		     
+		  } finally {
+		      br.close();
+		  }
+		}
+	
 	public static ArrayList<String> getpost() throws IOException{
 		String currentDirectory=System.getProperty("user.dir");
 		BufferedReader br = new BufferedReader(new FileReader(currentDirectory + "\\files\\post.txt"));

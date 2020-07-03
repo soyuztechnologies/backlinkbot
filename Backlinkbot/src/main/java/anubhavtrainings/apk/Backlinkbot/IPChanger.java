@@ -12,7 +12,7 @@ public class IPChanger {
 
 		Socket proxySocket = new Socket(socksProxy);
 		InetSocketAddress socketHost 
-		  = new InetSocketAddress("127.0.0.1", 3128);
+		  = new InetSocketAddress("127.0.0.4", 3128);
 		proxySocket.connect(socketHost);
 	}
 
