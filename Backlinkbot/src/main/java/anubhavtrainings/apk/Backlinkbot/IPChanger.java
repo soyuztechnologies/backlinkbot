@@ -1,27 +1,59 @@
 package anubhavtrainings.apk.Backlinkbot;
 
 import java.io.IOException;
-import java.net.InetSocketAddress;
-import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class IPChanger {
-	private static final java.net.Proxy socksProxy = null;
 	public static String currentDirectory=System.getProperty("user.dir");
-	static void proxy() throws IOException
+	static void googlerun() throws IOException
 	  {
-		String str1="192.168.0.201";
-		String str2="255.255.255.0";
-		String[] command1 = { "netsh", "interface", "ip", "set", "address",
-		"name=", "Local Area Connection" ,"source=static", "addr=",str1,
-		"mask=", str2};
-		Process pp = java.lang.Runtime.getRuntime().exec(command1);
-		 System.out.println(pp);
-		 WebDriver driver = BrowserFactory.getBrowserInstance(currentDirectory ,"chrome");
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			driver.get("https://whatismyipaddress.com/");
-	}
-
-}	
+		WebDriver driver = BrowserFactory.getBrowserInstance(currentDirectory ,"chrome");
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		
+		try {
+              
+		        ArrayList<String> readfiledomain = readfile.getAlldomain();
+			      ThreadLocalRandom random11 = ThreadLocalRandom.current();
+			      int rand11 = random11.nextInt(0, readfiledomain.size()-1);
+			      System.out.println(rand11);
+			      System.out.println(readfiledomain.get(rand11));
+			      ArrayList<String> readkey = readfile.getkey();
+			      ThreadLocalRandom randkeyindex = ThreadLocalRandom.current();
+			      int randk = randkeyindex.nextInt(0, readkey.size()-1);
+			      System.out.println(randk);
+			      System.out.println(readkey.get(randk));
+			      driver.get("http://www." + readfiledomain.get(rand11));
+			      driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			      WebElement elet1, elt31;
+			      elet1= driver.findElement(By.xpath("//input[contains(@aria-label,'Search')]"));
+			      ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();",    elet1);
+			      elet1.clear();
+			     elet1.sendKeys(readkey.get(randk));
+			     elt31= driver.findElement(By.xpath("//input[contains(@aria-label,'Google Search')]"));
+			     ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();",    elt31);
+			     elt31.click();
+			     List<WebElement> links = driver.findElements(By.xpath("//div[contains(text(),'Anubhav Oberoy')]"));
+			     ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();",    links);
+			     int linkCount = links.size();
+			     if(linkCount > 0){  
+			    	 List<WebElement> links1 = driver.findElements(By.xpath("//div[contains(text(),'Anubhav Oberoy')]"));
+			    	 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();",    links1);
+			    	 ((WebElement) links1).click();
+			     }
+			     System.out.println("Total Number of link count on webpage = "  + linkCount);
+		        // This  will scroll down the page by  1000 pixel vertical		
+		        js.executeScript("window.scrollBy(0,1000)");
+		 } catch(Exception e) {
+			  System.out.println("site1");
+		  }
+		
+	  }
+}

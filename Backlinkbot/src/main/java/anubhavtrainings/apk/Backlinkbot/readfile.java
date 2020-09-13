@@ -216,7 +216,45 @@ public class readfile {
 	        }
 			return fileformateSite ;
 	    }
+	    
+	    public static ArrayList<String> getAlldomain() throws IOException{
+			String currentDirectory=System.getProperty("user.dir");
+			BufferedReader br = new BufferedReader(new FileReader(currentDirectory + "\\files\\domains.txt"));
+			  try {
+			      StringBuilder sb = new StringBuilder();
+			      String line = br.readLine();
+			      ArrayList<String> domain = new ArrayList<String>();
+			      while (line != null) {
+			    	  domain.add(line);
+			      line = br.readLine();
+			      }
+			      return domain;
+			     
+			  } finally {
+			      br.close();
+			  }
+			}
+	    
+	    public static ArrayList<String> getkey() throws IOException{
+			String currentDirectory=System.getProperty("user.dir");
+			BufferedReader br = new BufferedReader(new FileReader(currentDirectory + "\\files\\ABAP on HANA.txt"));
+			  try {
+			      StringBuilder sb = new StringBuilder();
+			      String line = br.readLine();
+			      ArrayList<String> domain = new ArrayList<String>();
+			      while (line != null) {
+			    	  domain.add(line);
+			      line = br.readLine();
+			      }
+			      return domain;
+			     
+			  } finally {
+			      br.close();
+			  }
+			}
 }
+
+
 	  
 
 

@@ -123,7 +123,7 @@ public class Userinterface {
 		  	    public void actionPerformed(ActionEvent e){  
 		  	    	IPChanger  obj=new IPChanger ();  
 			    	try {
-						obj.proxy();
+						obj.googlerun();
 						
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block

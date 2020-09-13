@@ -6,11 +6,13 @@ import java.io.IOException;
 
 public class App {
   public static void main(String[] args) throws InterruptedException, IOException {
-	 Userinterface u = new Userinterface();
-	 ((Userinterface) u).Ginterface(args);
-	 //IPChanger i = new IPChanger();
-	  //((IPChanger) i).proxy();
-	 //PinSites  obj=new PinSites ();
+	 //Userinterface u = new Userinterface();
+	 //((Userinterface) u).Ginterface(args);
+	   IPChanger i = new IPChanger();
+	   ((IPChanger) i).googlerun();
+	  //Backlink  obj=new Backlink ();
+	 //((Backlink) obj).youtubeComment();
+	 
 	 //obj.Onlywire2(args);
 	 	 	  
   }
