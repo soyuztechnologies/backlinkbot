@@ -1,4 +1,5 @@
 package anubhavtrainings.apk.Backlinkbot;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -9,9 +10,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
-import com.sun.prism.paint.Color;
-
 import java.io.FileWriter;
 import java.io.IOException;
 public class Userinterface {
@@ -20,6 +18,7 @@ public class Userinterface {
 	      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	      JPanel panel = new JPanel(new GridBagLayout());
 	      GridBagConstraints constraints = new GridBagConstraints();
+	      panel.setBackground(Color.red);
 	      constraints.insets = new Insets(100,10, 100, 10);
 	      constraints.anchor = GridBagConstraints.WEST;
 	      JButton btn1 = new JButton("Make Backlink");

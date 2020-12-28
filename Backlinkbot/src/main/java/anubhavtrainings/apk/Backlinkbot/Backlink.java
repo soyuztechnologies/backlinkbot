@@ -747,7 +747,7 @@ public class Backlink {
 	   static void AnubhavSite() throws IOException
 	  {
 		
-			WebDriver driver = BrowserFactory.getBrowserInstance(currentDirectory ,"firefox");
+			WebDriver driver = BrowserFactory.getBrowserInstance(currentDirectory ,"chrome");
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			
 			try {
