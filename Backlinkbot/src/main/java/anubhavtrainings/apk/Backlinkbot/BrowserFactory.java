@@ -30,10 +30,9 @@ public class BrowserFactory {
 		}else {
 			
 			System.setProperty("webdriver.chrome.driver", currentDirectory + "\\files\\webdrivers\\chromedriver.exe");
-	    	driver = new ChromeDriver();
-	    	ChromeOptions options = new ChromeOptions();
-	    	options.addArguments("user-data-dir=https://mail.google.com/mail/u/0/?tab=rm#inbox");
-	    	
+			ChromeOptions options = new ChromeOptions();
+            //options.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
+            driver = new ChromeDriver(options);
 		}
 		
         return driver;

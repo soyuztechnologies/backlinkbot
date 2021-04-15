@@ -116,11 +116,11 @@ public class Userinterface {
 			    });
 	  
 	      panel.add(btn4, constraints);
-	      JButton btn5 = new JButton("IPChanger");
+	      JButton btn5 = new JButton("Close All");
 	      btn5.setPreferredSize(new Dimension(btn2.getPreferredSize().width, btn3 .getPreferredSize().height + 5));
 	      btn5.addActionListener(new ActionListener(){  
 		  	    public void actionPerformed(ActionEvent e){  
-		  	    	IPChanger  obj=new IPChanger ();  
+		  	    	IPChanger  obj=new IPChanger ();
 			    	try {
 						obj.googlerun();
 						

@@ -1,4 +1,4 @@
-package anubhavtrainings.apk.Backlinkbot;
+ /*package anubhavtrainings.apk.Backlinkbot;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -239,4 +239,4 @@ public class ui {
 	    
 }
 
-}
+}*/
