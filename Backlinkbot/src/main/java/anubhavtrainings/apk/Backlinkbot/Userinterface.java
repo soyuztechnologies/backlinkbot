@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -30,10 +31,16 @@ public class Userinterface {
 			    	readfile  obj1=new readfile ();
 			    	
 			    	try {
-			    		
 			    		 obj.BacklinkWin1();
 						 obj.BacklinkWin2();
 						 obj.BacklinkWin3();
+						 Thread.sleep(1000 * 60 * 60);
+						 obj.googlerun();
+						 obj.googlerun();
+						 Thread.sleep(10);
+						 JFrame f = new JFrame(); 
+						    JOptionPane.showMessageDialog(f," PLEASE CloseAll and RESTART.","EXECUTION COMPLETED",JOptionPane.WARNING_MESSAGE); 
+						 
 			    		
 						//System.out.println(obj);
 						//obj1.CreateFileWithTimeStamp(args);
@@ -100,13 +107,13 @@ public class Userinterface {
 			    });
 	      
 	      panel.add(btn3, constraints);
-	      JButton btn4 = new JButton("Onlywire");
+	      JButton btn4 = new JButton("Close All");
 	      btn4.setPreferredSize(new Dimension(btn4.WIDTH + 90, btn4.HEIGHT + 50));
 	      btn4.addActionListener(new ActionListener(){  
 		  	    public void actionPerformed(ActionEvent e){  
-		  	    	PinSites  obj=new PinSites ();  
+		  	    	IPChanger  obj=new IPChanger ();  
 			    	try {
-						obj.Onlywire(args);
+						obj.closeall();
 						
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block
@@ -115,22 +122,8 @@ public class Userinterface {
 		  	    }
 			    });
 	  
+	      
 	      panel.add(btn4, constraints);
-	      JButton btn5 = new JButton("Close All");
-	      btn5.setPreferredSize(new Dimension(btn2.getPreferredSize().width, btn3 .getPreferredSize().height + 5));
-	      btn5.addActionListener(new ActionListener(){  
-		  	    public void actionPerformed(ActionEvent e){  
-		  	    	IPChanger  obj=new IPChanger ();
-			    	try {
-						obj.googlerun();
-						
-					} catch (IOException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
-		  	    }
-			    });
-	      panel.add(btn5, constraints);
 	      frame.add(panel);
 	      frame.pack();
 	      frame.setVisible(true);

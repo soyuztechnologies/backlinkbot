@@ -775,7 +775,20 @@ public class Backlink {
 			
 	  }
 	   
-
+	   static void googlerun() throws IOException
+		  {
+			
+			
+			try {
+				Runtime.getRuntime().exec("taskkill /F /IM chrome.exe /T");
+				  } catch(Exception e) {
+					  System.out.println("error");
+				  }
+				  
+				
+		  }
+	   
+	 
 		   static void youtubeComment() throws IOException
 			  {
 			   WebDriver driver = BrowserFactory.getBrowserInstance(currentDirectory ,"chrome");

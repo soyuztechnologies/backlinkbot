@@ -11,11 +11,11 @@ public class App {
 	   //IPChanger i = new IPChanger();
 	   //((IPChanger) i).googlerun();
 	  //Backlink  obj=new Backlink ();
-	 //((Backlink) obj).youtubeComment();
+	   //((Backlink) obj).youtubeComment();
 	 
 	 //obj.Onlywire2(args);
-	  //ui u = new ui();
-	  //((ui) u).Ginterface1(args);
+	  //ui u1 = new ui();
+	  //((ui) u1).windowClosed(args);
 	 	 	  
   }
   
