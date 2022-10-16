@@ -1,5 +1,6 @@
 package anubhavtrainings.apk.Backlinkbot;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -121,6 +122,24 @@ public class Userinterface {
 					}
 		  	    }
 			    });
+	      JButton btng4 = new JButton("Google Run");
+	      btng4.setPreferredSize(new Dimension(btn4.WIDTH + 90, btn4.HEIGHT + 50));
+	      btng4.addActionListener(new ActionListener(){  
+		  	    public void actionPerformed(ActionEvent e){  
+		  	    	googleplay  obj=new googleplay ();  
+			    	try {
+						obj.google();
+						
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+		  	    }
+			    });
+	      panel.add(btng4, constraints);
+	      frame.add(panel);
+	      frame.pack();
+	      frame.setVisible(true);
 	  
 	      
 	      panel.add(btn4, constraints);

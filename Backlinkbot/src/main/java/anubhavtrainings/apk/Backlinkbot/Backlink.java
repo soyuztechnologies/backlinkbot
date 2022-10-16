@@ -791,10 +791,15 @@ public class Backlink {
 	 
 		   static void youtubeComment() throws IOException
 			  {
-			   WebDriver driver = BrowserFactory.getBrowserInstance(currentDirectory ,"chrome");
+			   /*WebDriver driver = BrowserFactory.getBrowserInstance(currentDirectory ,"chrome");
 				JavascriptExecutor js = (JavascriptExecutor) driver;
 				
 				try {
+					ArrayList<String> readaohfile = readfile.aohkey();
+				      ThreadLocalRandom randomaoh = ThreadLocalRandom.current();
+
+				      int aoh = randomaoh.nextInt(0, readaohfile.size()-1);
+					  driver.get(readaohfile.get(aoh));
 					
 					    driver.get("https://www.youtube.com/watch?v=PX5EmTPExLM&list=PLcxqFaocb9WLtnq-rpXbRy5hnKECxr95G");
 					    
@@ -816,7 +821,7 @@ public class Backlink {
 				        elem.click();
 				  } catch(Exception e) {
 					  System.out.println("site23");
-				  }
+				  }*/
 				 
 			  }
 			 

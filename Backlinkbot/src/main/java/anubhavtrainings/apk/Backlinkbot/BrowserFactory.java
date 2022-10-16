@@ -30,9 +30,9 @@ public class BrowserFactory {
 		}else {
 			
 			System.setProperty("webdriver.chrome.driver", currentDirectory + "\\files\\webdrivers\\chromedriver.exe");
-			ChromeOptions options = new ChromeOptions();
+			//ChromeOptions options = new ChromeOptions();
             //options.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
-            driver = new ChromeDriver(options);
+            driver = new ChromeDriver();
 		}
 		
         return driver;

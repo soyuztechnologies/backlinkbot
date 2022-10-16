@@ -76,6 +76,7 @@ public class readfile {
 		      while (line != null) {
 		      websites.add(line);
 		      line = br.readLine();
+		      //System.out.println(websites);
 		      }
 		      return websites;
 		     
@@ -234,24 +235,26 @@ public class readfile {
 			      br.close();
 			  }
 			}
-	    
-	    public static ArrayList<String> getkey() throws IOException{
+		public static ArrayList<String> readaohkey() throws IOException{
 			String currentDirectory=System.getProperty("user.dir");
 			BufferedReader br = new BufferedReader(new FileReader(currentDirectory + "\\files\\ABAP on HANA.txt"));
 			  try {
 			      StringBuilder sb = new StringBuilder();
 			      String line = br.readLine();
-			      ArrayList<String> domain = new ArrayList<String>();
+			      ArrayList<String> websites = new ArrayList<String>();
 			      while (line != null) {
-			    	  domain.add(line);
+			      websites.add(line);
 			      line = br.readLine();
+			      //System.out.println(websites);
 			      }
-			      return domain;
+			      return websites;
 			     
 			  } finally {
 			      br.close();
 			  }
+			   
 			}
+		
 }
 
 
