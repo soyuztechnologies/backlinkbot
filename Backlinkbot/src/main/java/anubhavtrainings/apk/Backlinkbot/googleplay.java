@@ -26,8 +26,8 @@ public class googleplay {
 		         int aoh = randomaoh.nextInt(0, readaohfile.size()-1);
 			     
 				   for(int x = 10; x < 13; x = x + 1) {
-					     System.out.print("value of x : " + x );
-				         System.out.print("\n");
+					     //System.out.print("value of x : " + x );
+				         //System.out.print("\n");
 				         
 				         WebDriver driver = BrowserFactory.getBrowserInstance(currentDirectory ,"chrome");
 				         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -50,9 +50,9 @@ public class googleplay {
 						 List<WebElement> allInputElements = driver.findElements(By.xpath("//h3[contains(text(),'ABAP on HANA cum S/4HANA with CDS Views and AMDP')]"));
 				         int y = 1;
 						 if ( allInputElements.size() != 0) {
-							 System.out.println("121");
+							 //System.out.println("121");
 							 for(int y1 = 1; y1 < 4; y1 = y1 + 1){
-						    		System.out.println("125");
+						    		//System.out.println("125");
 									 
 									 elem= driver.findElement(By.xpath("//h3[contains(text(),'ABAP on HANA cum S/4HANA with CDS Views and AMDP')]"));
 									 elem.click();
@@ -71,12 +71,12 @@ public class googleplay {
 								  
 								  if(allInputElements.size() == 0){
 									  for (int i = 0; i < 5; i++) {
-										  System.out.println("hello");
+										  //System.out.println("hello");
 										  js.executeScript("window.scrollBy(0,100)");
 										  List<WebElement> allInputElements1 = driver.findElements(By.xpath("//h3[contains(text(),'ABAP on HANA cum S/4HANA with CDS Views and AMDP')]"));
 										  System.out.println(allInputElements1.size());
 										  if(allInputElements1.size() == 0){
-											  System.out.println("hello1");
+											  //System.out.println("hello1");
 											  System.out.println(allInputElements1.size());
 											  nxtbtn= driver.findElement(By.xpath("//span[text()='Next']"));
 											  driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -119,7 +119,7 @@ public class googleplay {
 
 					}
 			  } catch(Exception e) {
-				  System.out.println("123");			  }
+				  System.out.println("error");			  }
 			 
 		  }
 				
