@@ -19,14 +19,14 @@ public class googleplay {
 	public static String currentDirectory=System.getProperty("user.dir");
 		static void google() throws IOException
 		  {
-			
+			//sample test
 			try {
-				ArrayList<String> readaohfile = readfile.readaohkey();
-		         ThreadLocalRandom randomaoh = ThreadLocalRandom.current();
-		         int aoh = randomaoh.nextInt(0, readaohfile.size()-1);
-			     
+
 				   for(int x = 10; x < 13; x = x + 1) {
-					     //System.out.print("value of x : " + x );
+						ArrayList<String> readaohfile = readfile.readaohkey();
+				         ThreadLocalRandom randomaoh = ThreadLocalRandom.current();
+				         int aoh = randomaoh.nextInt(0, readaohfile.size()-1); 
+					   //System.out.print("value of x : " + x );
 				         //System.out.print("\n");
 				         
 				         WebDriver driver = BrowserFactory.getBrowserInstance(currentDirectory ,"chrome");
