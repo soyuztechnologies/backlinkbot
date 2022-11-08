@@ -254,6 +254,65 @@ public class readfile {
 			  }
 			   
 			}
+		public static ArrayList<String> readui5key() throws IOException{
+			String currentDirectory=System.getProperty("user.dir");
+			BufferedReader br = new BufferedReader(new FileReader(currentDirectory + "\\files\\fiori.txt"));
+			  try {
+			      StringBuilder sb = new StringBuilder();
+			      String line = br.readLine();
+			      ArrayList<String> websites = new ArrayList<String>();
+			      while (line != null) {
+			      websites.add(line);
+			      line = br.readLine();
+			      //System.out.println(websites);
+			      }
+			      return websites;
+			     
+			  } finally {
+			      br.close();
+			  }
+			   
+			}
+		
+		public static ArrayList<String> readbtpkey() throws IOException{
+			String currentDirectory=System.getProperty("user.dir");
+			BufferedReader br = new BufferedReader(new FileReader(currentDirectory + "\\files\\btp.txt"));
+			  try {
+			      StringBuilder sb = new StringBuilder();
+			      String line = br.readLine();
+			      ArrayList<String> websites = new ArrayList<String>();
+			      while (line != null) {
+			      websites.add(line);
+			      line = br.readLine();
+			      //System.out.println(websites);
+			      }
+			      return websites;
+			     
+			  } finally {
+			      br.close();
+			  }
+			   
+			}
+		
+		public static ArrayList<String> readsackey() throws IOException{
+			String currentDirectory=System.getProperty("user.dir");
+			BufferedReader br = new BufferedReader(new FileReader(currentDirectory + "\\files\\sac.txt"));
+			  try {
+			      StringBuilder sb = new StringBuilder();
+			      String line = br.readLine();
+			      ArrayList<String> websites = new ArrayList<String>();
+			      while (line != null) {
+			      websites.add(line);
+			      line = br.readLine();
+			      //System.out.println(websites);
+			      }
+			      return websites;
+			     
+			  } finally {
+			      br.close();
+			  }
+			   
+			}
 		
 }
 

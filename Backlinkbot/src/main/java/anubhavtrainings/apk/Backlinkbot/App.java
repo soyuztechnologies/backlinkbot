@@ -15,7 +15,7 @@ public class App {
 	 
 	 //obj.Onlywire2(args);
 	   //googleplay i = new googleplay();
-	   //((googleplay) i).google();
+	   //((googleplay) i).googleabap();
 	//readfile i = new readfile();
 	   //((readfile) i).aohkey();
 	 	 	  

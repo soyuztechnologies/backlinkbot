@@ -122,13 +122,13 @@ public class Userinterface {
 					}
 		  	    }
 			    });
-	      JButton btng4 = new JButton("Google Run");
-	      btng4.setPreferredSize(new Dimension(btn4.WIDTH + 90, btn4.HEIGHT + 50));
+	      JButton btng4 = new JButton("Google Abap");
+	      btng4.setPreferredSize(new Dimension(btn4.WIDTH + 130, btn4.HEIGHT + 50));
 	      btng4.addActionListener(new ActionListener(){  
 		  	    public void actionPerformed(ActionEvent e){  
 		  	    	googleplay  obj=new googleplay ();  
 			    	try {
-						obj.google();
+						obj.googleabap();
 						
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block
@@ -136,12 +136,53 @@ public class Userinterface {
 					}
 		  	    }
 			    });
-	      panel.add(btng4, constraints);
-	      frame.add(panel);
-	      frame.pack();
-	      frame.setVisible(true);
-	  
+	      JButton btngui5 = new JButton("Google fiori");
+	      btngui5.setPreferredSize(new Dimension(btn4.WIDTH + 130, btn4.HEIGHT + 50));
+	      btngui5.addActionListener(new ActionListener(){  
+		  	    public void actionPerformed(ActionEvent e){  
+		  	    	googleplay  obj=new googleplay ();  
+			    	try {
+						obj.googlerunui5();
+						
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+		  	    }
+			    });
+	      JButton btngbtp = new JButton("Google BTP");
+	      btngbtp.setPreferredSize(new Dimension(btn4.WIDTH + 130, btn4.HEIGHT + 50));
+	      btngbtp.addActionListener(new ActionListener(){  
+		  	    public void actionPerformed(ActionEvent e){  
+		  	    	googleplay  obj=new googleplay ();  
+			    	try {
+						obj.googlerunbtp();
+						
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+		  	    }
+			    });
 	      
+	      JButton btngsac = new JButton("Google SAC");
+	      btngsac.setPreferredSize(new Dimension(btn4.WIDTH + 130, btn4.HEIGHT + 50));
+	      btngsac.addActionListener(new ActionListener(){  
+		  	    public void actionPerformed(ActionEvent e){  
+		  	    	googleplay  obj=new googleplay ();  
+			    	try {
+						obj.googlerunsac();
+						
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+		  	    }
+			    });
+	      panel.add(btngsac, constraints);
+	      panel.add(btngbtp, constraints);
+	      panel.add(btngui5, constraints);
+          panel.add(btng4, constraints);
 	      panel.add(btn4, constraints);
 	      frame.add(panel);
 	      frame.pack();
