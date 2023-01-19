@@ -27,12 +27,19 @@ public class BrowserFactory {
 				//FirefoxOptions options = new InternetExplorerDriver();
 				//options.setProfile(createFirefoxProfile());
 				driver = new InternetExplorerDriver();
+				//System.out.println("driver path"+driver);
 		}else {
 			
 			System.setProperty("webdriver.chrome.driver", currentDirectory + "\\files\\webdrivers\\chromedriver.exe");
 			//ChromeOptions options = new ChromeOptions();
             //options.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
+			/*ChromeOptions options = new ChromeOptions();
+			options.addArguments("--incognito");
+			DesiredCapabilities capabilities = new DesiredCapabilities();
+			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+			options.merge(capabilities);*/
             driver = new ChromeDriver();
+            System.out.println(System.setProperty("webdriver.chrome.driver", currentDirectory + "\\files\\webdrivers\\chromedriver.exe"));
 		}
 		
         return driver;

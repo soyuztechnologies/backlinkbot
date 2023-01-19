@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 public class Userinterface {
 	static void Ginterface(final String[] args) throws IOException  {  
 		  final JFrame frame = new JFrame(Userinterface.class.getSimpleName());
@@ -30,17 +31,28 @@ public class Userinterface {
 		  	    public void actionPerformed(ActionEvent e){  
 			    	Backlink  obj=new Backlink (); 
 			    	readfile  obj1=new readfile ();
+			    	IPChanger i = new IPChanger();
 			    	
 			    	try {
 			    		 obj.BacklinkWin1();
 						 obj.BacklinkWin2();
 						 obj.BacklinkWin3();
-						 Thread.sleep(1000 * 60 * 60);
-						 obj.googlerun();
-						 obj.googlerun();
-						 Thread.sleep(10);
-						 JFrame f = new JFrame(); 
-						    JOptionPane.showMessageDialog(f," PLEASE CloseAll and RESTART.","EXECUTION COMPLETED",JOptionPane.WARNING_MESSAGE); 
+                         TimeUnit.MINUTES.sleep(2);
+                         i.closeall();
+                         System.out.println("first all page closed");
+                         i.closeall();
+                         System.out.println("2nd all page closed");
+                         i.closeall();
+						 //JFrame f = new JFrame(); 
+						   // JOptionPane.showMessageDialog(f," PLEASE CloseAll and RESTART.","EXECUTION COMPLETED",JOptionPane.WARNING_MESSAGE); 
+						 //IPChanger  objc=new IPChanger ();
+						 //objc.closeall();
+						 //objc.closeall();
+						 Thread.sleep(5);
+						 //Backlink  objbacklink=new Backlink ();
+						 //objbacklink.BacklinkWin1();
+						 //objbacklink.BacklinkWin2();
+						// objbacklink.BacklinkWin3();
 						 
 			    		
 						//System.out.println(obj);

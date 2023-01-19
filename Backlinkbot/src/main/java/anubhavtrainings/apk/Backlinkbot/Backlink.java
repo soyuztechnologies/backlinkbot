@@ -284,24 +284,24 @@ public class Backlink {
 	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();",     elementpt1);
 	    elementpt1.click();
 		  } catch(Exception e) {
-			  System.out.println("site11");
+			  System.out.println("site11 2nd page");
 		  }
 		  try {
 			  ArrayList<String> readfilealldata = readfile.getAllSites();
 		      ThreadLocalRandom random = ThreadLocalRandom.current();
 
 		      int rand = random.nextInt(0, readfilealldata.size()-1);
-			  ((JavascriptExecutor) driver).executeScript("window.open('https://us.mysiteslink.com/index.php')");
+			  ((JavascriptExecutor) driver).executeScript("window.open('https://www.w3era.com/tool/backlink-maker/')");
 			  driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			  Set<String> parent=driver.getWindowHandles();
 			  Object[] child=parent.toArray();
 			  driver.switchTo().window((String) child[1]);
 		      WebElement elementpt11, elementpt2;
-		      elementpt11= driver.findElement(By.xpath("//input[@id='sn']"));
+		      elementpt11= driver.findElement(By.xpath("//input[@id='myurl']"));
 		      ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();",     elementpt11);
 		      elementpt11.click();
 		      elementpt11.sendKeys(readfilealldata.get(rand));
-		      elementpt2= driver.findElement(By.xpath("//input[@id='ss']"));
+		      elementpt2= driver.findElement(By.xpath("//a[@id='checkButton']"));
 		      ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();",     elementpt2);
 		      elementpt2.click();
 			  
@@ -314,17 +314,17 @@ public class Backlink {
 		      ThreadLocalRandom random = ThreadLocalRandom.current();
 
 		      int rand = random.nextInt(0, readfilealldata.size()-1);
-			  ((JavascriptExecutor) driver).executeScript("window.open('https://feedburner.google.com/fb/a/ping')");
+			  ((JavascriptExecutor) driver).executeScript("window.open('https://www.seoczar.com/tools/en/backlink-maker')");
 			  driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			  Set<String> parent=driver.getWindowHandles();
 			  Object[] child=parent.toArray();
 			  driver.switchTo().window((String) child[2]);
 		      WebElement elementpt21, elementpt31;
-		      elementpt21= driver.findElement(By.xpath("//input[@name='bloglink']"));
+		      elementpt21= driver.findElement(By.xpath("//input[@class='form-control']"));
 		      ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();",    elementpt21);
 		      elementpt21.click();
 		      elementpt21.sendKeys(readfilealldata.get(rand));
-		      elementpt31= driver.findElement(By.xpath("//input[@class='button']"));
+		      elementpt31= driver.findElement(By.xpath("//a[@id='checkButton']"));
 		      ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();",    elementpt31);
 		      elementpt31.click();
 			     
@@ -507,7 +507,7 @@ public class Backlink {
 			      ele31.click();
 				     
 			  } catch(Exception e) {
-				  System.out.println("site21");
+				  System.out.println("site21 3rd page");
 			  }
 			try {
 				  ArrayList<String> readfilealldata = readfile.getAllSites();
@@ -569,7 +569,7 @@ public class Backlink {
 				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", ele21);
 				ele21.click();
 				ele21.sendKeys(readfilealldata.get(rand));
-				ele31= driver.findElement(By.xpath("//input[@value='Make BackLinks']"));
+				ele31= driver.findElement(By.xpath("//input[@class='check_res_button']"));
 				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", ele31);
 				ele31.click();
 
@@ -774,21 +774,6 @@ public class Backlink {
 			  
 			
 	  }
-	   
-	   static void googlerun() throws IOException
-		  {
-			
-			
-			try {
-				Runtime.getRuntime().exec("taskkill /F /IM chrome.exe /T");
-				  } catch(Exception e) {
-					  System.out.println("error");
-				  }
-				  
-				
-		  }
-	   
-	 
 		   static void youtubeComment() throws IOException
 			  {
 			   /*WebDriver driver = BrowserFactory.getBrowserInstance(currentDirectory ,"chrome");
