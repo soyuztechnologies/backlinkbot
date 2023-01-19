@@ -41,7 +41,7 @@ public class Userinterface {
                          i.closeall();
                          System.out.println("first all page closed");
                          i.closeall();
-                         System.out.println("2nd all page closed");
+                         System.out.println("2nd all page closedhhvh");
                          i.closeall();
 						 //JFrame f = new JFrame(); 
 						   // JOptionPane.showMessageDialog(f," PLEASE CloseAll and RESTART.","EXECUTION COMPLETED",JOptionPane.WARNING_MESSAGE); 
