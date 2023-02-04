@@ -769,11 +769,11 @@ public class Backlink {
 				driver.quit();
 				
 			  } catch(Exception e) {
-				  System.out.println("site23");
+				  driver.quit();
 			  }
-			  
-			
-	  }
+				  
+				
+		  }
 		   static void youtubeComment() throws IOException
 			  {
 			   /*WebDriver driver = BrowserFactory.getBrowserInstance(currentDirectory ,"chrome");

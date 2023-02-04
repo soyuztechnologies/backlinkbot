@@ -17,5 +17,18 @@ public class IPChanger {
 			  
 			
 	  }
+	static void closejava() throws IOException
+	  {
+		
+		
+		try {
+			
+			Runtime.getRuntime().exec("taskkill /im javaw.exe");
+			  } catch(Exception e1) {
+				  System.out.println("error");
+			  }
+			  
+			
+	  }
 	
 }

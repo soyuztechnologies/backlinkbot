@@ -313,6 +313,44 @@ public class readfile {
 			  }
 			   
 			}
+		public static ArrayList<String> readworkflowkey() throws IOException{
+			String currentDirectory=System.getProperty("user.dir");
+			BufferedReader br = new BufferedReader(new FileReader(currentDirectory + "\\files\\workflow.txt"));
+			  try {
+			      StringBuilder sb = new StringBuilder();
+			      String line = br.readLine();
+			      ArrayList<String> websites = new ArrayList<String>();
+			      while (line != null) {	
+			      websites.add(line);
+			      line = br.readLine();
+			      //System.out.println(websites);
+			      }
+			      return websites;
+			     
+			  } finally {
+			      br.close();
+			  }
+			   
+			}
+		public static ArrayList<String> readhybridkey() throws IOException{
+			String currentDirectory=System.getProperty("user.dir");
+			BufferedReader br = new BufferedReader(new FileReader(currentDirectory + "\\files\\hybrid.txt"));
+			  try {
+			      StringBuilder sb = new StringBuilder();
+			      String line = br.readLine();
+			      ArrayList<String> websites = new ArrayList<String>();
+			      while (line != null) {
+			      websites.add(line);
+			      line = br.readLine();
+			      //System.out.println(websites);
+			      }
+			      return websites;
+			     
+			  } finally {
+			      br.close();
+			  }
+			   
+			}
 		
 }
 

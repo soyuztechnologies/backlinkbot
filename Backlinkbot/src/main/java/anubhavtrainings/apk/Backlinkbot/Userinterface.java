@@ -21,12 +21,12 @@ public class Userinterface {
 	      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	      JPanel panel = new JPanel(new GridBagLayout());
 	      GridBagConstraints constraints = new GridBagConstraints();
-	      panel.setBackground(Color.red);
-	      constraints.insets = new Insets(100,10, 100, 10);
+	      panel.setBackground(Color.blue);
+	      constraints.insets = new Insets(100,1, 100, 10);
 	      constraints.anchor = GridBagConstraints.WEST;
-	      JButton btn1 = new JButton("Make Backlink");
+	      JButton btn1 = new JButton("AutoRun Backlink");
+	      //btn1.setLocation(1200, 800);
 	      btn1.setPreferredSize(new Dimension(btn1.WIDTH + 117, btn1.HEIGHT + 40));
-	      panel.add(btn1, constraints);
 	      btn1.addActionListener(new ActionListener(){  
 		  	    public void actionPerformed(ActionEvent e){  
 			    	Backlink  obj=new Backlink (); 
@@ -34,21 +34,31 @@ public class Userinterface {
 			    	IPChanger i = new IPChanger();
 			    	
 			    	try {
-			    		 obj.BacklinkWin1();
-						 obj.BacklinkWin2();
-						 obj.BacklinkWin3();
-                         TimeUnit.MINUTES.sleep(2);
-                         i.closeall();
-                         System.out.println("first all page closed");
-                         i.closeall();
-                         System.out.println("2nd all page close");
-                         i.closeall();
-						 //JFrame f = new JFrame(); 
-						   // JOptionPane.showMessageDialog(f," PLEASE CloseAll and RESTART.","EXECUTION COMPLETED",JOptionPane.WARNING_MESSAGE); 
-						 //IPChanger  objc=new IPChanger ();
-						 //objc.closeall();
-						 //objc.closeall();
-						 Thread.sleep(5);
+			    		do{  
+			    			//code to be executed
+				    		 obj.BacklinkWin1();
+	                         TimeUnit.MINUTES.sleep(30);
+	                         i.closeall();
+	                         System.out.println("first all page closed");
+							 //JFrame f = new JFrame(); 
+							   // JOptionPane.showMessageDialog(f," PLEASE CloseAll and RESTART.","EXECUTION COMPLETED",JOptionPane.WARNING_MESSAGE);
+	                         IPChanger i1 = new IPChanger();
+	                         Thread.sleep(30);
+				    		 //obj.BacklinkWin1();
+							 obj.BacklinkWin3();
+	                         TimeUnit.MINUTES.sleep(30);
+	                         i1.closeall();
+	                         System.out.println("2nd all page closed");
+	                         i1.closeall();
+	                         IPChanger i2 = new IPChanger();
+	                         Thread.sleep(30);
+				    		 //obj.BacklinkWin1();
+							 obj.BacklinkWin2();
+	                         TimeUnit.MINUTES.sleep(30);
+	                         i2.closeall();
+	                         System.out.println("3rd all page closed");
+	                         i2.closeall();
+			    			}while(true);  
 						 //Backlink  objbacklink=new Backlink ();
 						 //objbacklink.BacklinkWin1();
 						 //objbacklink.BacklinkWin2();
@@ -57,12 +67,12 @@ public class Userinterface {
 			    		
 						//System.out.println(obj);
 						//obj1.CreateFileWithTimeStamp(args);
-				    	String fileformate =obj1.CreateFileForBacklinkTrack(args);
-				    	System.out.println(fileformate);
-						FileWriter myWriter = new FileWriter(fileformate, true);
-					      myWriter.write( obj.toString());
-					      myWriter.write("\r\n");
-					      myWriter.close();
+				    	//String fileformate =obj1.CreateFileForBacklinkTrack(args);
+				    	//System.out.println(fileformate);
+						//FileWriter myWriter = new FileWriter(fileformate, true);
+					     // myWriter.write( obj.toString());
+					      //myWriter.write("\r\n");
+					      //myWriter.close();
 						
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block
@@ -75,20 +85,22 @@ public class Userinterface {
 			        }
 		  	    
 			    });
-	      JButton btn2 = new JButton("Youtube Playlist");
-	      btn2.setPreferredSize(new Dimension(btn2.WIDTH + 126, btn2.HEIGHT + 50));
-	      btn2.addActionListener(new ActionListener(){  
+	      JButton btnytube = new JButton("Youtube Playlist");
+	      btnytube.setPreferredSize(new Dimension(btnytube.WIDTH + 126, btnytube.HEIGHT + 50));
+	      btnytube.addActionListener(new ActionListener(){  
 	  	    public void actionPerformed(ActionEvent e){  
 		    	Backlink  objy=new Backlink ();
 		    	readfile  obj1=new readfile ();
 		    	try {
-					objy.youtube();
-					String fileformateYou =obj1.CreateFileForYoutubeTrack(args);
-			    	System.out.println(fileformateYou);
-					FileWriter myWriter = new FileWriter(fileformateYou, true);
-				      myWriter.write( objy.toString());
-				      myWriter.write("\r\n");
-				      myWriter.close();
+		    		do{  
+		    			objy.youtube();
+						String fileformateYou =obj1.CreateFileForYoutubeTrack(args);
+				    	System.out.println(fileformateYou);
+						FileWriter myWriter = new FileWriter(fileformateYou, true);
+					      myWriter.write( objy.toString());
+					      myWriter.write("\r\n");
+					      myWriter.close();  
+		    			}while(true); 
 					
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
@@ -96,7 +108,7 @@ public class Userinterface {
 				}
 	  	    }
 		    });
-	      panel.add(btn2, constraints);
+	      //panel.add(btn2, constraints);
 	      JButton btn3 = new JButton("AnubhavSite");
 	      btn3.setPreferredSize(new Dimension(btn3.WIDTH + 105, btn3.HEIGHT + 50));
 	      btn3.addActionListener(new ActionListener(){  
@@ -104,13 +116,18 @@ public class Userinterface {
 			    	Backlink  obj=new Backlink ();
 			    	readfile  obj1=new readfile ();
 			    	try {
-						obj.AnubhavSite();
-						String fileformateSite =obj1.CreateFileForAnubhavSiteTrack(args);
-				    	System.out.println(fileformateSite);
-						FileWriter myWriter = new FileWriter(fileformateSite, true);
-					      myWriter.write( obj.toString());
-					      myWriter.write("\r\n");
-					      myWriter.close();
+			    		do {
+			    			  // code block to be executed
+			    			obj.AnubhavSite();
+							String fileformateSite =obj1.CreateFileForAnubhavSiteTrack(args);
+					    	System.out.println(fileformateSite);
+							FileWriter myWriter = new FileWriter(fileformateSite, true);
+						      myWriter.write( obj.toString());
+						      myWriter.write("\r\n");
+						      myWriter.close();
+			    			}
+			    			while (true);
+						
 						
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block
@@ -118,11 +135,11 @@ public class Userinterface {
 					}
 		  	    }
 			    });
-	      
 	      panel.add(btn3, constraints);
-	      JButton btn4 = new JButton("Close All");
-	      btn4.setPreferredSize(new Dimension(btn4.WIDTH + 90, btn4.HEIGHT + 50));
-	      btn4.addActionListener(new ActionListener(){  
+	      JButton btnclose = new JButton("Close All");
+	      btnclose.setBackground(Color.yellow);
+	      btnclose.setPreferredSize(new Dimension(btnclose.WIDTH + 90, btnclose.HEIGHT + 50));
+	      btnclose.addActionListener(new ActionListener(){  
 		  	    public void actionPerformed(ActionEvent e){  
 		  	    	IPChanger  obj=new IPChanger ();  
 			    	try {
@@ -134,13 +151,15 @@ public class Userinterface {
 					}
 		  	    }
 			    });
-	      JButton btng4 = new JButton("Google Abap");
-	      btng4.setPreferredSize(new Dimension(btn4.WIDTH + 130, btn4.HEIGHT + 50));
-	      btng4.addActionListener(new ActionListener(){  
+	      JButton btnabap = new JButton("Google Abap");
+	      btnabap.setPreferredSize(new Dimension(btnabap.WIDTH + 130, btnabap.HEIGHT + 50));
+	      btnabap.addActionListener(new ActionListener(){  
 		  	    public void actionPerformed(ActionEvent e){  
 		  	    	googleplay  obj=new googleplay ();  
 			    	try {
-						obj.googleabap();
+			    		do{  
+			    			obj.googleabap(); 
+			    			}while(true); 
 						
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block
@@ -149,12 +168,14 @@ public class Userinterface {
 		  	    }
 			    });
 	      JButton btngui5 = new JButton("Google fiori");
-	      btngui5.setPreferredSize(new Dimension(btn4.WIDTH + 130, btn4.HEIGHT + 50));
+	      btngui5.setPreferredSize(new Dimension(btngui5.WIDTH + 130, btngui5.HEIGHT + 50));
 	      btngui5.addActionListener(new ActionListener(){  
 		  	    public void actionPerformed(ActionEvent e){  
 		  	    	googleplay  obj=new googleplay ();  
 			    	try {
-						obj.googlerunui5();
+			    		do{  
+			    			obj.googlerunui5(); 
+			    			}while(true); 
 						
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block
@@ -163,12 +184,14 @@ public class Userinterface {
 		  	    }
 			    });
 	      JButton btngbtp = new JButton("Google BTP");
-	      btngbtp.setPreferredSize(new Dimension(btn4.WIDTH + 130, btn4.HEIGHT + 50));
+	      btngbtp.setPreferredSize(new Dimension(btngbtp.WIDTH + 130, btngbtp.HEIGHT + 50));
 	      btngbtp.addActionListener(new ActionListener(){  
 		  	    public void actionPerformed(ActionEvent e){  
 		  	    	googleplay  obj=new googleplay ();  
 			    	try {
-						obj.googlerunbtp();
+			    		do{  
+			    			obj.googlerunbtp();  
+			    			}while(true); 
 						
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block
@@ -178,12 +201,14 @@ public class Userinterface {
 			    });
 	      
 	      JButton btngsac = new JButton("Google SAC");
-	      btngsac.setPreferredSize(new Dimension(btn4.WIDTH + 130, btn4.HEIGHT + 50));
+	      btngsac.setPreferredSize(new Dimension(btngsac.WIDTH + 130, btngsac.HEIGHT + 50));
 	      btngsac.addActionListener(new ActionListener(){  
 		  	    public void actionPerformed(ActionEvent e){  
 		  	    	googleplay  obj=new googleplay ();  
 			    	try {
-						obj.googlerunsac();
+			    		do{  
+			    			obj.googlerunsac();  
+			    			}while(true); 
 						
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block
@@ -191,11 +216,82 @@ public class Userinterface {
 					}
 		  	    }
 			    });
+	      JButton btnautobacklink = new JButton("backlink 30");
+	      btnautobacklink.setPreferredSize(new Dimension(btnautobacklink.WIDTH + 130, btnautobacklink.HEIGHT + 50));
+	      btnautobacklink.addActionListener(new ActionListener(){  
+		  	    public void actionPerformed(ActionEvent e){  
+			    	Backlink  obj=new Backlink (); 
+			    	readfile  obj1=new readfile ();
+			    	IPChanger i = new IPChanger();  
+			    	try {
+			    		 obj.BacklinkWin1();
+			    		 obj.BacklinkWin2();
+			    		 obj.BacklinkWin3();
+						
+					} catch (IOException | InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+		  	    }
+			    });
+	      JButton btnworkflow = new JButton("Workflow");
+	      btnworkflow.setPreferredSize(new Dimension(btnworkflow.WIDTH + 130, btnworkflow.HEIGHT + 50));
+	      btnworkflow.addActionListener(new ActionListener(){  
+		  	    public void actionPerformed(ActionEvent e){  
+		  	    	googleplay  obj=new googleplay ();  
+			    	try {
+			    		do{  
+			    			obj.googlerunworkflow();  
+			    			}while(true); 
+						
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+		  	    }
+			    });
+	      JButton btnghybrid = new JButton("Hybrid");
+	      btnghybrid.setPreferredSize(new Dimension(btnghybrid.WIDTH + 130, btnghybrid.HEIGHT + 50));
+	      btnghybrid.addActionListener(new ActionListener(){  
+		  	    public void actionPerformed(ActionEvent e){  
+		  	    	googleplay  obj=new googleplay ();  
+			    	try {
+			    		do{  
+			    			obj.googlerunhybrid();  
+			    			}while(true); 
+						
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+		  	    }
+			    });
+	      JButton jclose = new JButton("Exit");
+	      jclose.setBackground(Color.red);
+	      jclose.setPreferredSize(new Dimension(jclose.WIDTH + 90, jclose.HEIGHT + 50));
+	      jclose.addActionListener(new ActionListener(){  
+		  	    public void actionPerformed(ActionEvent e){  
+		  	    	IPChanger  obj=new IPChanger ();  
+			    	try {
+						obj.closejava();
+						
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+		  	    }
+			    });
+	      panel.add(btnghybrid, constraints);
+	      panel.add(btnworkflow, constraints);
+	      panel.add(btnautobacklink, constraints);
+	      panel.add(btnytube, constraints);
+	      panel.add(btn1, constraints);
 	      panel.add(btngsac, constraints);
 	      panel.add(btngbtp, constraints);
 	      panel.add(btngui5, constraints);
-          panel.add(btng4, constraints);
-	      panel.add(btn4, constraints);
+          panel.add(btnabap, constraints);
+          panel.add(jclose, constraints);
+	      panel.add(btnclose, constraints);
 	      frame.add(panel);
 	      frame.pack();
 	      frame.setVisible(true);
