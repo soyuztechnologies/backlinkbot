@@ -1,9 +1,10 @@
 package anubhavtrainings.apk.Backlinkbot;
+import javax.swing.*;
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,10 +13,14 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+
+import javafx.scene.control.Button;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 public class Userinterface {
+	static JFrame f;
 	static void Ginterface(final String[] args) throws IOException  {  
 		  final JFrame frame = new JFrame(Userinterface.class.getSimpleName());
 	      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -54,6 +59,7 @@ public class Userinterface {
 	                         Thread.sleep(30);
 				    		 //obj.BacklinkWin1();
 							 obj.BacklinkWin2();
+							 
 	                         TimeUnit.MINUTES.sleep(30);
 	                         i2.closeall();
 	                         System.out.println("3rd all page closed");
@@ -297,5 +303,66 @@ public class Userinterface {
 	      frame.setVisible(true);
 	    
 }
-
+	void ComboBoxExample(){    
+	    f=new JFrame("ComboBox Example");   
+	    final JLabel label = new JLabel();          
+	    label.setHorizontalAlignment(JLabel.CENTER);  
+	    label.setSize(400,100);  
+	    JButton b=new JButton("Show");  
+	    b.setBounds(200,100,75,20);  
+	    String languages[]={"C","C++","C#","Java","PHP"};        
+	    final JComboBox cb=new JComboBox(languages);
+	    System.out.println("selected" + cb.getSelectedIndex());
+	    cb.setBounds(50, 100,90,20);    
+	    f.add(cb); f.add(label); f.add(b);    
+	    f.setLayout(null);    
+	    f.setSize(350,350);    
+	    f.setVisible(true);       
+	    b.addActionListener(new ActionListener() {  
+	        public void actionPerformed(ActionEvent e) { 
+	        	System.out.println("selected after" + cb.getSelectedIndex());
+	        	try {
+	        		switch(cb.getSelectedIndex()) {
+	        		  case 0:
+	        		    // code block
+	        			  googleplay  obj1=new googleplay ();
+	        			  obj1.googlerunsac();
+	        		    break;
+	        		  case 1:
+	        		    // code block
+	        			  googleplay  obj2=new googleplay ();
+	        			  obj2.googlerunbtp();
+	        		    break;
+	        		  case 2:
+		        		    // code block
+	        			    Backlink  obj=new Backlink ();
+	        			    obj.BacklinkWin1();
+		        		    break;
+	        		  case 3:
+		        		    // code block
+	        			  googleplay  obj3=new googleplay ();
+	        			  obj3.googlerunworkflow();
+		        		    break;
+	        		  case 4:
+		        		    // code block
+	        			  googleplay  obj4=new googleplay ();
+	        			  obj4.googlerunhybrid();
+		        		    break;
+	        		  default:
+	        		    // code block
+	        			  System.out.println("selected last" + cb.getSelectedIndex());
+	        		}
+					//obj.BacklinkWin1();
+					
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+	        	
+	//String data = "Programming language Selected: "   
+	  // + cb.getItemAt(cb.getSelectedIndex());  
+	//label.setText(data);  
+	}  
+	});           
+	}
 }

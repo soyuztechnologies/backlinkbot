@@ -715,6 +715,8 @@ public class Backlink {
 			      ele31= driver.findElement(By.xpath("//input[@type='submit']"));
 			      ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();",  ele31);
 			      ele31.click();
+			      TimeUnit.MINUTES.sleep(1);
+			    	   driver.quit();
 			  } catch(Exception e) {
 				  System.out.println("site30");
 			  }
@@ -776,10 +778,11 @@ public class Backlink {
 		  }
 		   static void youtubeComment() throws IOException
 			  {
-			   /*WebDriver driver = BrowserFactory.getBrowserInstance(currentDirectory ,"chrome");
+			   WebDriver driver = BrowserFactory.getBrowserInstance(currentDirectory ,"chrome");
 				JavascriptExecutor js = (JavascriptExecutor) driver;
+				driver.quit();
 				
-				try {
+				/*try {
 					ArrayList<String> readaohfile = readfile.aohkey();
 				      ThreadLocalRandom randomaoh = ThreadLocalRandom.current();
 

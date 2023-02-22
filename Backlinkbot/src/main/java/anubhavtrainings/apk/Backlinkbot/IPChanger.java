@@ -1,7 +1,6 @@
 package anubhavtrainings.apk.Backlinkbot;
 
 import java.io.IOException;
-
 public class IPChanger {
 	//public static String currentDirectory=System.getProperty("user.dir");
 	static void closeall() throws IOException
